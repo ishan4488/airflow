@@ -25,7 +25,7 @@ from moto import mock_sqs
 
 from airflow import DAG
 from airflow.contrib.hooks.aws_sqs_hook import SQSHook
-from airflow.contrib.sensors.aws_sqs_sensor import SQSSensor
+from airflow.providers.aws.sensors.sqs import SQSSensor
 from airflow.exceptions import AirflowException
 from airflow.utils import timezone
 
