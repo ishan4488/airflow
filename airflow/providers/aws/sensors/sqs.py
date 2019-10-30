@@ -20,8 +20,8 @@
 Reads and then deletes the message from SQS queue
 """
 
-from airflow.providers.aws.hooks.sqs import SQSHook
 from airflow.exceptions import AirflowException
+from airflow.providers.aws.hooks.sqs import SQSHook
 from airflow.sensors.base_sensor_operator import BaseSensorOperator
 from airflow.utils.decorators import apply_defaults
 
