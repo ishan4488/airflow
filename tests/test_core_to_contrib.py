@@ -786,6 +786,11 @@ SENSOR = [
         "airflow.providers.aws.sensors.athena.AthenaSensor",
         "airflow.contrib.sensors.aws_athena_sensor.AthenaSensor",
     ),
+    (
+        "airflow.providers.aws.sensors.sqs.SQSSensor",
+        "airflow.contrib.sensors.aws_sqs_sensor.SQSSensor",
+    ),
+
 ]
 ALL = HOOK + OPERATOR + SENSOR
 RENAMED_HOOKS = [
