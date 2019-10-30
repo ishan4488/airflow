@@ -389,7 +389,7 @@ These integrations allow you to perform various operations within the Amazon Web
 
    * - `Amazon Simple Queue Service (SQS) <https://aws.amazon.com/sns/>`__
      - :mod:`airflow.providers.aws.hooks.sqs`
-     - :mod:`airflow.contrib.operators.aws_sqs_publish_operator`
+     - :mod:`airflow.providers.aws.operators.sqs`
      - :mod:`airflow.providers.aws.sensors.sqs`
 
 Transfer operators and hooks
