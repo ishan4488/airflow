@@ -22,7 +22,7 @@
 import warnings
 
 # pylint: disable=unused-import
-from airflow.providers.aws.hooks.sqs import SQSHook
+from airflow.providers.aws.hooks.sqs import SQSHook # noqa
 
 warnings.warn(
     "This module is deprecated. Please use `airflow.providers.aws.hooks.sqs`.",
