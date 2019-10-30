@@ -16,6 +16,9 @@
 # KIND, either express or implied.  See the License for the
 # specific language governing permissions and limitations
 # under the License.
+"""
+Reads and then deletes the message from SQS queue
+"""
 
 from airflow.contrib.hooks.aws_sqs_hook import SQSHook
 from airflow.exceptions import AirflowException
@@ -75,7 +78,7 @@ class SQSSensor(BaseSensorOperator):
 
         self.log.info("received message %s", str(messages))
 
-        if 'Messages' in messages and len(messages['Messages']) > 0:
+        if 'Messages' in messages and messages['Messages']:
 
             entries = [{'Id': message['MessageId'], 'ReceiptHandle': message['ReceiptHandle']}
                        for message in messages['Messages']]
